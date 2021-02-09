@@ -169,7 +169,7 @@ class WooProduct {
         priceHtml = json['price_html'],
         onSale = json['on_sale'],
         purchasable = json['purchasable'],
-        totalSales = json['total_sales'],
+        totalSales = int.tryParse('${json["total_sales"]}'),
         virtual = json['virtual'],
         downloadable = json['downloadable'],
         downloads = (json['downloads'] as List)
